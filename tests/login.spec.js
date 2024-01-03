@@ -11,8 +11,8 @@ test('Link open', async ({ page }) => {
 test('Login superuser', async ({ page }) => {
   await page.goto('https://pre-ctms.daxclients.com/');
   // A(),
-  await page.locator('//input[@id="email"]').fill('admin_test@yopmail.com')
-  await page.locator('//input[@id="password"]').fill('Test123#')
+  await page.locator('//input[@id="email"]').fill('admin@yopmail.com')
+  await page.locator('//input[@id="password"]').fill('_@Dmin123_')
   await page.locator('//button[@id=":r2:"]').click()
  // await page.waitForSelector('//p[contains(text(),"Principal Investigator")]', {timeout: 5000})
   await page.waitForTimeout(3000)
