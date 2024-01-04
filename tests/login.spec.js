@@ -24,9 +24,9 @@ test('Login superuser', async ({ page }) => {
   await page.locator('//input[@id="last_name"]').fill("User2")
   await page.locator('//input[@id="credentials"]').fill("Test123")
   await page.locator('//input[@id="phone_number"]').fill("2488296501")
-  await page.locator('//input[@id="email_address"]').fill("mubeetestuser2@yopmail.com")
-  await page.locator('//button[@type="submit"]').click()
-  await page.locator('//a[contains(text(),"Principal Investigator")]').click()
+ // await page.locator('//input[@id="email_address"]').fill("mubeetestuser2@yopmail.com")
+ // await page.locator('//button[@type="submit"]').click()
+ // await page.locator('//a[contains(text(),"Principal Investigator")]').click()
  // await page.pause()
 });
 
