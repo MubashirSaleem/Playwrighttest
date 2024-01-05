@@ -1,9 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 const casual = require('casual');
-// const { Chance } = require('chance');
-// const chance = new Chance();
-// const fakeEmail = chance.email();
 const uniqueEmail = `user_${casual.first_name.toLowerCase()}@yopmail.com`;
 
 test('Link open', async ({ page }) => {
@@ -29,8 +26,7 @@ test('Login superuser', async ({ page }) => {
   await page.locator('//input[@id="last_name"]').fill("User2")
   await page.locator('//input[@id="credentials"]').fill("Test123")
   await page.locator('//input[@id="phone_number"]').fill("2488296501")
-  
-  await page.locator('//input[@id="email_address"]').fill(uni)
+  await page.locator('//input[@id="email_address"]').fill(uniqueEmail)
   await page.locator('//button[@type="submit"]').click()
   await page.locator('//a[contains(text(),"Principal Investigator")]').click()
  // await page.pause()
