@@ -2,6 +2,7 @@
 const { test, expect } = require('@playwright/test');
 const casual = require('casual');
 const uniqueEmail = `user_${casual.first_name.toLowerCase()}@yopmail.com`;
+const uniquelastname = `${casual.first_name.toLowerCase()}`;
 
 test('Link open', async ({ page }) => {
   await page.goto('https://pre-ctms.daxclients.com/');
@@ -18,12 +19,12 @@ test('Login superuser', async ({ page }) => {
   await page.locator('//button[@id=":r2:"]').click()
  // await page.waitForSelector('//p[contains(text(),"Principal Investigator")]', {timeout: 5000})
   await page.waitForTimeout(3000)
-  await page.locator('//p[contains(text(),"Principal Investigator")]').click()
+  await page.locator('//p[contains(text(),"Investigator")]').click()
   await page.locator('//body/div[@id="__next"]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/button[3]').click()
  // await page.waitForTimeout(5000)
   await page.setInputFiles('//h5[contains(text(),"Add Picture")]', 'tests/uploadfiles/t1.jpg')
-  await page.locator('//input[@id="first_name"]').fill("Mubeetest2")
-  await page.locator('//input[@id="last_name"]').fill("User2")
+  await page.locator('//input[@id="first_name"]').fill("Mubee")
+  await page.locator('//input[@id="last_name"]').fill(uniquelastname)
   await page.locator('//input[@id="credentials"]').fill("Test123")
   await page.locator('//input[@id="phone_number"]').fill("2488296501")
   await page.locator('//input[@id="email_address"]').fill(uniqueEmail)
