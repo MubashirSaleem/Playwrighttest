@@ -33,7 +33,6 @@ test('Login superuser', async ({ page }) => {
   await page.waitForTimeout(3000)
   await page.locator('//p[@class="MuiTypography-root MuiTypography-body1 css-1h5rs46"][normalize-space()="Signout"]').click()
   await page.waitForTimeout(3000)
-
  // await page.pause()
 });
 
