@@ -7,4 +7,5 @@ node_modules/
 /playwright-report/
 /blob-report/
 /playwright/.cache/
-/playwright/tests/login.spec.js
+/playwright/ignore/*
+/playwright/ignore/
