@@ -22,9 +22,7 @@ test('Login superuser', async ({ page }) => {
   await page.waitForTimeout(3000)
   await page.locator('//p[@class="MuiTypography-root MuiTypography-body1 css-1h5rs46"][normalize-space()="Signout"]').click()
   await page.waitForTimeout(3000)
- 
   await page.goto('https://revival.syncora.com/');
-  // A(),
   await page.locator('//input[@id="email"]').fill('admin@yopmail.com')
   await page.locator('//input[@id="password"]').fill('_@Dmin123_')
   await page.locator('//button[@id=":r2:"]').click()
@@ -32,7 +30,7 @@ test('Login superuser', async ({ page }) => {
   await page.locator('//div[@class="MuiBox-root css-9xkke2"]//img[@alt="logo"]').click()
   await page.waitForTimeout(3000)
   await page.locator('//p[@class="MuiTypography-root MuiTypography-body1 css-1h5rs46"][normalize-space()="Signout"]').click()
- // await page.pause()
+  await page.pause()
 });
 
 
