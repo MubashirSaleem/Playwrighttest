@@ -8,8 +8,14 @@ pipeline {
     stages {
         stage('Run Job') {
             steps {
-                // Your job steps here
-                echo 'Running the job...'
+                // Checkout your code repository if needed
+                // git 'your_repository_url'
+
+                // Install npm dependencies
+                sh 'npm install'
+
+                // Run npm start
+                sh 'npm run start'
             }
         }
     }
