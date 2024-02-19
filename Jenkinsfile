@@ -7,7 +7,7 @@ pipeline {
 
     environment {
         NODE_VERSION = '14.17.0'
-        NVM_DIR = "$HOME/.nvm"
+        NVM_HOME = "C:\\Program Files\\nodejs"
     }
 
     stages {
