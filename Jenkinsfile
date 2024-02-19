@@ -18,5 +18,21 @@ pipeline {
             }
         }
 
+        stage('Build') {
+            steps {
+                // Checkout your code repository
+                // bat 'git clone your_repository_url'
+
+                // Use the installed Node.js version
+                bat "\"${NVM_HOME}\\nvm.exe\" use ${NODE_VERSION}"
+
+                // Install npm dependencies
+                // bat 'npm install'
+
+                // Run your build script
+                bat 'npm run start'
+            }
+        }
+
     }
 }
