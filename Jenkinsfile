@@ -12,7 +12,6 @@ pipeline {
                 // git 'your_repository_url'
 
                 // Install npm dependencies
-                sh 'npm install'
 
                 // Run npm start
                 sh 'npm run start'
