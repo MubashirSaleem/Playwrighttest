@@ -13,15 +13,8 @@ pipeline {
     stages {
        stage('Setup') {
             steps {
-                // Install nvm
-                sh 'curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash'
-
-                // Load nvm
-                sh 'export NVM_DIR="$HOME/.nvm"'
-                sh '[ -s "$NVM_DIR/nvm.sh" ] && /. "$NVM_DIR/nvm.sh"'
-
-                // Install Node.js
-                sh "nvm install ${env.NODE_VERSION}"
+                // Download and install Node.js
+                bat "\"${NVM_HOME}\\nvm.exe\" install ${NODE_VERSION}"
             }
         }
 
