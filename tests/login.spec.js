@@ -20,7 +20,7 @@ test('Login superuser', async ({ page }) => {
  // await page.waitForSelector('//p[contains(text(),"Principal Investigator")]', {timeout: 5000})
   await page.waitForTimeout(3000)
   await page.locator('//p[contains(text(),"Investigator")]').click()
-  await page.locator('//body/div[@id="__next"]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/button[3]').click()
+  await page.locator('//body/div[@id="__next"]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[2]/div[1]/button[3]').click()
  // await page.waitForTimeout(5000)
   await page.setInputFiles('//h5[contains(text(),"Add Picture")]', 'tests/uploadfiles/t1.jpg')
   await page.locator('//input[@id="first_name"]').fill("Mubee")
