@@ -11,29 +11,29 @@ pipeline {
     }
 
     stages {
-       stage('Setup') {
+       stage('Check Node js Version') {
             steps {
-                // Download and install Node.js
                 bat "node -v"
+                // Download and install Node.js
                 // bat "\"${NVM_HOME}\\nvm.exe\" install ${NODE_VERSION}"
             }
         }
 
-        // stage('Build') {
-        //     steps {
-        //         // Checkout your code repository
-        //         // bat 'git clone your_repository_url'
+        stage('Start Test') {
+            steps {
+                // Checkout your code repository
+                // bat 'git clone your_repository_url'
 
-        //         // Use the installed Node.js version
-        //         bat "\"${NVM_HOME}\\nvm.exe\" use ${NODE_VERSION}"
+                // Use the installed Node.js version
+                // bat "\"${NVM_HOME}\\nvm.exe\" use ${NODE_VERSION}"
 
-        //         // Install npm dependencies
-        //         // bat 'npm install'
+                // Install npm dependencies
+                // bat 'npm install'
 
-        //         // Run your build script
-        //         bat 'npm run start'
-        //     }
-        // }
+                // Run your build script
+                bat 'npm run start'
+            }
+        }
 
     }
 }
