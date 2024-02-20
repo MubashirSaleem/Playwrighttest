@@ -11,6 +11,13 @@ pipeline {
     }
 
     stages {
+
+    //     - name: Install dependencies
+    //   run: npm ci
+    // - name: Install Playwright Browsers
+    //   run: npx playwright install --with-deps
+    // - name: Run Playwright tests
+    //   run: npx playwright test
        stage('Check Node js Version') {
             steps {
                 bat "node -v"
@@ -25,19 +32,16 @@ pipeline {
             }
         }
 
-        stage('Start Test') {
+        stage('Install Playwright Browsers') {
             steps {
-                // Checkout your code repository
-                // bat 'git clone your_repository_url'
+                bat "npx playwright install --with-deps"
+            }
+        }
 
-                // Use the installed Node.js version
-                // bat "\"${NVM_HOME}\\nvm.exe\" use ${NODE_VERSION}"
-
-                // Install npm dependencies
-                // bat 'npm install'
-
-                // Run your build script
-                bat 'npm run start'
+        stage('Run Playwright tests') {
+            steps {
+                // bat "npx playwright test"
+                bat "npx playwright test ./login.spec.js --project chromium --headed"
             }
         }
 
