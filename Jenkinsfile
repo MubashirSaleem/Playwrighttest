@@ -19,6 +19,12 @@ pipeline {
             }
         }
 
+        stage('Install dependencies') {
+            steps {
+                bat "npm install"
+            }
+        }
+
         stage('Start Test') {
             steps {
                 // Checkout your code repository
