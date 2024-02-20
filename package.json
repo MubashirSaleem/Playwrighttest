@@ -10,14 +10,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.40.1",
+    "@playwright/test": "^1.41.2",
     "@types/node": "^20.10.3"
   },
   "dependencies": {
     "@faker-js/faker": "^8.3.1",
     "casual": "^1.6.2",
     "chance": "^1.1.11",
-    "faker": "^6.6.6",
-    "playwright": "^1.41.2"
+    "faker": "^6.6.6"
   }
 }
