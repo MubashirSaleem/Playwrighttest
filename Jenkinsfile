@@ -40,8 +40,8 @@ pipeline {
 
         stage('Run Playwright tests') {
             steps {
-                // bat "npx playwright test"
-                bat "npx playwright test ./login.spec.js --project chromium --headed"
+                bat "npm run start"
+                // bat "npx playwright test ./login.spec.js --project chromium --headed"
             }
         }
 
